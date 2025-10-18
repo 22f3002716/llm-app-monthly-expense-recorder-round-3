@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Recorder with Trend Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Recorder with Trend Analysis</h1>
+
+        <section class="expense-entry">
+            <h2>Add New Expense</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-description" placeholder="Description" required>
+                <input type="number" id="expense-amount" placeholder="Amount" step="0.01" min="0.01" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="current-expenses">
+            <h2>Current Month's Expenses</h2>
+            <ul id="expense-list">
+                <!-- Expenses will be loaded here -->
+            </ul>
+            <p>Total: $<span id="total-expenses">0.00</span></p>
+            <button id="clear-data-btn">Delete All Current Month Expenses</button>
+        </section>
+
+        <section class="trend-analysis">
+            <h2>Expense Trend (Last 3 Months)</h2>
+            <div id="trend-chart">
+                <!-- Trend bars will be rendered here -->
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
